@@ -5,9 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
   <title>SyS Industrial Refrigeración</title>
 
   <style>
+    * {
+      font-family: "Manrope", serif;
+      font-optical-sizing: auto;
+      /* font-weight: <weight>; */
+      font-style: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Manrope", serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+    }
+    
+
     /* Animation for scrolling left */
     @keyframes scroll {
       0% {
@@ -18,38 +37,75 @@
         transform: translateX(-100%);
       }
     }
+
+    .servicio {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .servicio {
+        flex-direction: column;
+      }
+    }
+    
+    .servicio > .foto {
+      flex: 1 1 40%;
+    }
+
+    .servicio > .contenido {
+      flex: 2 1 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+
   </style>
 </head>
 
 <body>
-  <nav class="container">
-    <ul>
-      <li><strong>❄️⚙️ SyS Refrigeración Industrial</strong></li>
-    </ul>
-    <!-- <ul>
-      <li><a href="#">La Empresa</a></li>
-      <li><a href="#">Objetivo</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Clientes</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul> -->
-  </nav>
+  <header class="" style="background-color: lightgray; background-image: url('./hero_bg.jpg'); background-size: cover; background-position: center;">
+    <nav class="container">
+      <ul style="color: white;">
+        <li><strong>SyS Refrigeración Industrial</strong></li>
+      </ul>
+      <!-- <ul>
+        <li><a href="#">La Empresa</a></li>
+        <li><a href="#">Objetivo</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul> -->
+    </nav>
+  
+    
+    <section class="container" style="display: flex; justify-content: center; align-items: center; height: 600px;">
+      <hgroup>
 
-  <header class="container">
-    <h1>Servicios y Suministros
-      para la Refrigeración Industrial
-    </h1>
-    <p>
-      La creación de SYS se basa en la idea de que las Empresas puedan disfrutar de instalaciones de refrigeración
-      eficientes, seguras y de calidad con el costo mas bajo.
-    </p>
-    <p>
-      Nuestra empresa posee al día todos los requerimientos de seguridad para el ingreso a planta, de acuerdo a
-      indicaciones de nuestro Ingeniero de Seguridad.
-    </p>
-
+        <h1 style="color: white; text-align: center; font-size: 4rem;">
+          Servicios y Suministros
+        </h1>
+        <p style="color: white; text-align: center; font-size: 2rem; font-weight: 200;">
+          para la refrigeración industrial
+        </p>
+      </hgroup>
+    </section>
   </header>
-  <div class="container">
+
+  <!-- <p>
+    La creación de SYS se basa en la idea de que las Empresas puedan disfrutar de instalaciones de refrigeración
+    eficientes, seguras y de calidad con el costo mas bajo.
+  </p>
+  <p>
+    Nuestra empresa posee al día todos los requerimientos de seguridad para el ingreso a planta de clientes en Argentina, Paraguay y Uruguay.
+  </p> -->
+  
+  <br /><br />
+  <!-- <div class="container">
     <div class="grid">
 
       <div>
@@ -93,73 +149,161 @@
         </p>
       </div>
     </div>
+    <hr />
+  </div> -->
+
+  <section class="container">
+    <div style="text-align:center">
+      <h2>
+        Tenemos experiencia ofrecido nuestros servicios <br /> a clientes en Argentina, Paraguay y Uruguay
+      </h2>
+      <p>
+        <small>
+          Contamos con todos los requerimientos de seguridad para el ingreso a planta
+        </small>
+      </p>
+    </div>
+    
+    <hr />
+
+    <section class="servicio">
+      <div class="foto">
+        <img src="./compresor.jpg" style="object-fit: cover; border-radius: 7px; object-position: center; height: 100%; width: 100%;"/>
+      </div>      
+      <div class="contenido">
+        <h3>
+          Servicio Técnico a Compresores
+        </h3>
+
+        <small>
+          Soporte técnico, repuestos y servicios para más de 200 marcas, incluyendo:
+          <br />
+          <strong>GRASSO, HOWDEN, FRICK, MYCOM</strong> y sistemas de control <strong>GSC</strong>.
+          <br />
+          Trabajamos con la comercializadora <strong>GEOTEG.</strong>
+
+        </small>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <div class="foto">
+        <img src="./pipes.jpg" style="object-fit: cover; border-radius: 7px; object-position: center; height: 100%; width: 100%;"/>
+      </div>
+      <div class="contenido">
+        <h3>
+          Montajes Industriales
+        </h3>
+
+        <small>
+          Especializados en instalaciones frigoríficas, realizamos montajes de cañerías y equipos con <strong>mano de
+            obra altamente calificada</strong>,
+          procedimientos y soldadores calificados, tanto para hierro negro como para acero inoxidable.
+        </small>
+      </div>
+    </section>
+
+    <section class="servicio">
+      <div class="foto">
+        <img src="./gabinete_electrico.jpg" style="object-fit: cover; border-radius: 7px; object-position: center; height: 100%; width: 100%;"/>      
+      </div>
+      <div class="contenido">
+        <h3>
+          Construcción de Tableros Eléctricos
+        </h3>
+
+        <small>
+          Construcción de tableros eléctricos de automatismo y potencia, en media y baja tensión, arrancadores suaves
+          ó softstarter, arrancadores por variadores de frecuencia, automatismo de cámaras frigoríficas, instalación
+          de celdas de media tensión.
+          Provisión de tableros automáticos de transferencia de tensión de red a grupos electrógenos.
+        </small>
+      </div>
+    </section>
 
     <hr />
-  </div>
+  </section>
 
-  <div class="container">
-
-    <p>
-      <small style="color: gray">
-        <i>
-          Servicios
-        </i>
-      </small>
-    </p>
-
-    <div class="grid">
-      <article>
-        <header>⚙️ Servicio Técnico a Compresores
-        </header>
-
-        <i>
-          <small>
-            Soporte técnico, repuestos y servicios para más de 200 marcas, incluyendo:
-            <br />
-            <strong>GRASSO, HOWDEN, FRICK, MYCOM</strong> y sistemas de control <strong>GSC</strong>.
-            <br />
-            Trabajamos con la comercializadora <strong>GEOTEG.</strong>
-
-          </small>
-        </i>
-
-      </article>
-
-      <article>
-        <header> ⚙️ Montajes Industriales
-        </header>
-        <i>
-          <small>
-            Especializados en instalaciones frigoríficas, realizamos montajes de cañerías y equipos con <strong>mano de
-              obra altamente calificada</strong>,
-            procedimientos y soldadores calificados, tanto para hierro negro como para acero inoxidable.
-          </small>
-        </i>
-
-      </article>
-
-      <article>
-        <header>
-          ⚙️ Construcción de Tableros Eléctricos
-        </header>
-        <i>
-          <small>
-            Construcción de tableros eléctricos de automatismo y potencia, en media y baja tensión, arrancadores suaves
-            ó softstarter, arrancadores por variadores de frecuencia, automatismo de cámaras frigoríficas, instalación
-            de celdas de media tensión.
-            Provisión de tableros automáticos de transferencia de tensión de red a grupos electrógenos.
-          </small>
-        </i>
-
-      </article>
+  <section class="container" style="margin-top: 3rem;">
+    <div style="text-align:center">
+      <h2>
+        Orgullosos de los clientes que confían en nuestro trabajo
+      </h2>
+      <!-- <p>
+        <small>
+          Buscamos construir un vínculo de confianza y profesionalismo con nuestros clientes.
+        </small>
+      </p> -->
     </div>
-  </div>
+  </section>
 
-  <div class="container">
-    <h3>Clientes</h3>
-  </div>
+  <section class="container" style="display: flex; flex-direction: row;">
+    <div style="display: inline-block; height: 100%;">
+      <img src="arcor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+    <div style="display: inline-block; height: 100%;">
+      <img src="danone.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+    <div style="display: inline-block; height: 100%;">
+      <img src="farco.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+    <div style="display: inline-block; height: 100%;">
+      <img src="frigor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+    <div style="display: inline-block; height: 100%;">
+      <img src="quilmes.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+    <div style="display: inline-block; height: 100%;">
+      <img src="serenisima.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+    </div>
+  </section>
 
-  <div class="container" style="background-color: darkblue; color: white;">
+  <!-- <section class="container">
+    <div style="width: 100%; overflow: hidden; text-wrap: nowrap;">
+      <div style="text-wrap: nowrap; height: 9rem; display: inline-flex; flex-direction: row; min-width: 100%; width: max-content; animation: scroll 20s linear infinite;">
+        <div style="display: inline-block; height: 100%;">
+          <img src="arcor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="danone.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="farco.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="frigor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="quilmes.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="serenisima.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+      </div>
+      <div style="text-wrap: nowrap; height: 9rem; display: inline-flex; flex-direction: row; min-width: 100%; width: max-content; animation: scroll 20s linear infinite;">
+        <div style="display: inline-block; height: 100%;">
+          <img src="arcor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="danone.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="farco.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="frigor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="quilmes.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+        <div style="display: inline-block; height: 100%;">
+          <img src="serenisima.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="container">
 
     <div style="text-align: center; font-style: italic;">
       <div style="width: 100%; overflow: hidden; display: flex; flex-direction: row;">
@@ -210,7 +354,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
 
   <footer class="container">
     <hr>
@@ -219,13 +363,13 @@
         <h3>Contacto</h3>
       </header>
       <p>
-        Ramón L. Falcón 6045 1 “A” (1408) Buenos Aires-Argentina
-      </p>
-      <p>
         Tel/fax. +54 11 15 325 5123
       </p>
       <p>
         E-mail: ventas@sysrefrigeracion.com
+      </p>
+      <p>
+        Buenos Aires, Argentina
       </p>
     </article>
   </footer>
