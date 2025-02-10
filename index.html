@@ -65,31 +65,79 @@
       justify-content: center;
     }
 
+    .hero-text {
+      color: white; 
+      text-align: center; 
+      font-size: 4rem;
+    }
+    @media (max-width: 426px) {
+      .hero-text {
+        font-size: 2rem;
+      }
+    }
+    .hero-subtext {
+      color: white; 
+      text-align: center; 
+      font-size: 2rem;
+      font-weight: 200;
+    }
+    @media (max-width: 426px) {
+      .hero-subtext {
+        font-size: 1.25rem;
+      }
+    }
 
+    .contact-mobile {
+      display: none
+    }
+    @media (max-width: 768px) {
+      .contact-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    .contact-desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .contact-desktop {
+        display: none;
+      }
+    }
+
+    
   </style>
 </head>
 
 <body>
   <header class="" style="background-color: lightgray; background-image: url('./hero_bg.jpg'); background-size: cover; background-position: center;">
     <nav class="container">
-      <ul style="color: white">
+      <!-- <ul style="color: white">
         <li><img  src="./sys_logo.svg" width="100" /></li>
-      </ul>
-      <ul >
-        <li><a style="color: white; margin: 12px" href="#servicios">Servicios</a></li>
-        <li><a style="color: white; margin: 12px" href="#clientes">Clientes</a></li>
-        <li><a style="color: white; margin: 12px" href="#contacto">Contacto</a></li>
+      </ul> -->
+      <ul style="justify-content: center; width: 100%;">
+        <li><a style="color: white; margin: 0 5px;" href="#servicios">Servicios</a></li>
+        <li><a style="color: white; margin: 0 5px;" href="#clientes">Clientes</a></li>
+        <li><a style="color: white; margin: 0 5px;" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   
     
     <section class="container" style="display: flex; justify-content: center; align-items: center; height: 400px;">
       <hgroup>
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img  src="./sys_logo.svg" width="100" style="margin: auto; align-self: center ;"/>
 
-        <h1 style="color: white; text-align: center; font-size: 4rem;">
+        </div>
+        <h1 class="hero-text">
           Servicios y Suministros
         </h1>
-        <p style="color: white; text-align: center; font-size: 2rem; font-weight: 200;">
+        <p class="hero-subtext">
           para la refrigeración industrial
         </p>
         <br />
@@ -131,9 +179,8 @@
         <small>
           Soporte técnico, repuestos y servicios para más de 200 marcas, incluyendo:
           <br />
-          <strong>GRASSO, HOWDEN, FRICK, MYCOM</strong> y sistemas de control <strong>GSC</strong>.
-          <br />
-          Trabajamos con la comercializadora <strong>GEOTEG.</strong>
+          <strong>GRASSO, HOWDEN, FRICK</strong> y sistemas de control <strong>GSC</strong>.
+
 
         </small>
       </div>
@@ -191,24 +238,27 @@
     </div>
   </section>
 
-  <section class="container" style="display: flex; flex-direction: row;" id="clientes">
+  <section class="container" style="display: flex; flex-direction: row; justify-content: space-between; max-width: 800px; margin: 0 auto;" id="clientes">
     <div style="display: inline-block; height: 100%;">
-      <img src="arcor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+      <img src="arcor.jpg" style="display: inline; height: 100%;" />
     </div>
     <div style="display: inline-block; height: 100%;">
-      <img src="danone.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+      <img src="danone.jpg" style="display: inline; height: 100%;" />
     </div>
     <div style="display: inline-block; height: 100%;">
-      <img src="farco.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+      <img src="farco.jpg" style="display: inline; height: 100%;" />
+    </div>
+  </section>
+
+  <section class="container" style="display: flex; flex-direction: row; justify-content: space-between; max-width: 800px; margin: 0 auto;" id="clientes">
+    <div style="display: inline-block; height: 100%;">
+      <img src="frigor.jpg" style="display: inline; height: 100%;" />
     </div>
     <div style="display: inline-block; height: 100%;">
-      <img src="frigor.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+      <img src="quilmes.jpg" style="display: inline; height: 100%;" />
     </div>
     <div style="display: inline-block; height: 100%;">
-      <img src="quilmes.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
-    </div>
-    <div style="display: inline-block; height: 100%;">
-      <img src="serenisima.jpg" style="margin: 0 1rem; display: inline; height: 100%;" />
+      <img src="serenisima.jpg" style="display: inline; height: 100%;" />
     </div>
   </section>
 
@@ -314,19 +364,37 @@
   <div style="background-color: darkblue; overflow: hidden;" id="contacto">
     <footer class="container"  style="padding: 2rem 0;">
       <header>
-        <h2 style="color: white">Contacto</h2>
+        <h2 style="color: white; text-align: center;">Contacto</h2>
       </header>
-      <span style="color: white">
-        +54 11 5325 5123 
-      </span>
-      <span style="color: white; margin: 0 1rem">|</span>
-      <span style="color: white">
-        ventas@sysrefrigeracion.com
-      </span>
-      <span style="color: white; margin: 0 1rem">|</span>
-      <span style="color: white">
-        Buenos Aires, Argentina
-      </span>
+
+      <div class="contact-desktop">
+        <span style="color: white">
+          +54 11 5325 5123 
+        </span>
+        <span style="color: white; margin: 0 1rem">|</span>
+        <span style="color: white">
+          ventas@sysrefrigeracion.com
+        </span>
+        <span style="color: white; margin: 0 1rem">|</span>
+        <span style="color: white">
+          Buenos Aires, Argentina
+        </span>
+      </div>
+
+      <div class="contact-mobile">
+        <span style="color: white">
+          +54 11 5325 5123 
+        </span>
+
+        <span style="color: white">
+          ventas@sysrefrigeracion.com
+        </span>
+
+        <span style="color: white">
+          Buenos Aires, Argentina
+        </span>
+      </div>
+
     </footer>
   </div>
 </body>
